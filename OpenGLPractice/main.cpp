@@ -97,13 +97,6 @@ int main( void ) {
     vector<float> vertices = tree.getVertices();
     const int size = tree.getSize();
     
-    cout << "SIZE: " << size << "\n";
-
-    /*
-    for (int i = 0; i < size*9; i++) {
-        std::cout << vertices.at(i) << "\n";
-    }*/
-
 	static const GLushort g_element_buffer_data[] = { 0, 1, 2 };
 
 	GLuint vertexbuffer;
