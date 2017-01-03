@@ -97,6 +97,8 @@ void drawSolidCylinder(vec4 point1, vec4 point2, float radius, int divisions) {
     float xDist = point2.x-point1.x;
     float yDist = point2.y-point1.y;
     float zDist = point2.z-point1.z;
+    if (zDist == 0)
+        zDist = 0.00001f;
     float dist = sqrt(xDist*xDist + yDist*yDist + zDist*zDist);
 
     float radToDeg = 57.2957795;
@@ -129,19 +131,18 @@ void drawSolidCylinder(vec4 point1, vec4 point2, float radius, int divisions) {
 
 void display() {
    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
    glLoadIdentity();
-   glTranslatef(0,0,-7);
+   glTranslatef(0,-10,-50);
 
-   drawSolidCylinder(vec4(0, -4, 0, 0), vec4(1, -2, 1, 0), 1, 20);
+   drawSolidCylinder(vec4(0, 0, 0, 0), vec4(40, 0, 0, 0), 1, 20);
    
-   t=0.53;
    glutSwapBuffers();
 } 
 
+
 void InitGL(int Width, int Height) {
    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
-   glClearDepth(3.0);
+   glClearDepth(1.0);
    glDepthFunc(GL_LESS);
    glEnable(GL_DEPTH_TEST);
 
@@ -150,6 +151,9 @@ void InitGL(int Width, int Height) {
    glLoadIdentity();
    gluPerspective(45.0f,(GLfloat)Width/(GLfloat)Height,0.1f,100.0f);
    glMatrixMode(GL_MODELVIEW);
+
+
+
 
    glEnable(GL_LIGHTING);
    GLfloat LightAmbient[] = { 0.5f, 0.5f, 0.5f, 1.0f };
