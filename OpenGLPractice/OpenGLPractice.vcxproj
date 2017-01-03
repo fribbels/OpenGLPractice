@@ -50,13 +50,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\ivanc\CPractice\OpenGLPractice\OpenGLPractice;C:\Users\ivanc\CPractice\OpenGLPractice\glm;C:\Users\ivanc\CPractice\OpenGLPractice\glfw\include;C:\Users\ivanc\CPractice\OpenGLPractice\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\ivanc\CPractice\OpenGLPractice\glut\include;C:\Users\ivanc\CPractice\OpenGLPractice\OpenGLPractice;C:\Users\ivanc\CPractice\OpenGLPractice\glm;C:\Users\ivanc\CPractice\OpenGLPractice\glfw\include;C:\Users\ivanc\CPractice\OpenGLPractice\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\ivanc\CPractice\OpenGLPractice\glfw\lib-vc2010;C:\Users\ivanc\CPractice\OpenGLPractice\glew\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\ivanc\CPractice\OpenGLPractice\glut\lib;C:\Users\ivanc\CPractice\OpenGLPractice\glfw\lib-vc2010;C:\Users\ivanc\CPractice\OpenGLPractice\glew\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32.lib;glfw3.lib;freeglut.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
